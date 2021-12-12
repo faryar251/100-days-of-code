@@ -10,7 +10,7 @@ def countpair_sum(ar, sum):
     count = 0
 
     for i in range(0, len(ar)):
-        # check the occurance of the pair before the current iteration
+        # check the occurrence of the pair before the current iteration
         # if duplicate exists, then the current number ar[i] will be paired with all the duplicate pairs that occured before this iteration
         if sum - ar[i] in freq:
             count += freq[sum-ar[i]]
