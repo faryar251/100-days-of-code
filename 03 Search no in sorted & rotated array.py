@@ -6,11 +6,14 @@
 
 # ref - https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
 
-## APPROACH 2 [4,5,6,7,8,9,10 1,2,3]
+## ex, A = [4,5,6,7,8,9,10 1,2,3]
 
 def search(arr, l, h, key):
+
+    ## base case when the key is not found in the array
     if l > h:
         return -1
+
     m = (l + h) // 2
 
     if key == arr[m]:
@@ -42,10 +45,9 @@ if i != -1:
 else:
     print('Key not found')
 
-# Instead of two or more pass of binary search 
-# the result can be found in one pass of binary search in this approach
-# Time Complexity: O(log n). 
-# Binary Search requires log n comparisons to find the element. 
-# So time complexity is O(log n).
-# Space Complexity: O(1). 
+# Instead of two or more pass of binary search, the result can be found in one pass of binary search in this approach
+# Binary Search requires log n comparisons to find the element.
+# Time Complexity: O(log n)
+
 # As no extra space is required.
+# Space Complexity: O(1)
